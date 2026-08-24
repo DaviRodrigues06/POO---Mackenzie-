@@ -2,12 +2,12 @@ package Biblioteca;
 
 public class Livro {
 
-    private Long isbn;
+    private int isbn;
     private String titulo;
     private String autor;
     private boolean disponivel = true;
 
-    public Livro(Long isbn, String titulo, String autor){
+    public Livro(int isbn, String titulo, String autor){
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
@@ -19,7 +19,7 @@ public class Livro {
         System.out.println(usuario.getId());
     }
 
-    public Long getIsbn(){
+    public int getIsbn(){
         return this.isbn;
     }
     public void setDisponivel(boolean i){
