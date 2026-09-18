@@ -32,6 +32,20 @@ public class Veiculo {
         this.ligado = false;
     }
 
+    public void acelerar(){
+        if (ligado) {
+            this.velocidade += 10;
+        }
+    }
+
+    public void frear(){
+        this.velocidade = Math.max(0, this.velocidade - 10);
+    }
+
+    public double calcularIPVA(){
+        return this.preco * 0.04;
+    }
+
     public String info(){
         return this.info;
     }

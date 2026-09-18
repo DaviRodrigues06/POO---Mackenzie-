@@ -12,7 +12,7 @@ public class Moto extends Veiculo{
 
     @Override
     public String info(){
-        return this.info();
+        return super.info();
     }
 
 
