@@ -2,12 +2,11 @@ import java.util.ArrayList;
 
 public abstract class Restaurante{
     private String nome;
-    private ArrayList<Avaliacao> avaliacoes;
+    private ArrayList<Avaliacao> avaliacoes = new ArrayList<>();
     private int totalAvaliacoes;
 
-    public Restaurante(String nome, ArrayList<Avaliacao> avaliacoes){
+    public Restaurante(String nome){
         this.nome = nome;
-        this.avaliacoes = avaliacoes;
     }
 
     public void adicionarAvaliacao(Avaliacao a){
@@ -23,7 +22,7 @@ public abstract class Restaurante{
             media += avaliacao.getNota();
         }
 
-        return media/avaliacoes.size();
+        return ajustarMedia( media / avaliacoes.size());
     }
 
     public String getNome(){
@@ -34,7 +33,7 @@ public abstract class Restaurante{
         return avaliacoes;
     }
 
-    public static int totalAvaliacoes(){
+    public static int totalAvaliacoes(ArrayList<Restaurante> listaRestaurantes){
         int totalAvaliacoes = 0;
         for(Restaurante restaurante : listaRestaurantes){
             totalAvaliacoes = restaurante.getAvaliacoes().size();

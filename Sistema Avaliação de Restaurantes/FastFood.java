@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class FastFood extends Restaurante{
     private String tipo;
 
@@ -8,6 +10,6 @@ public class FastFood extends Restaurante{
 
     @Override
     public double ajustarMedia(double media){
-        
+        return media;
     }
 }

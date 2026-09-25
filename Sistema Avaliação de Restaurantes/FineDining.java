@@ -8,7 +8,11 @@ public class FineDining extends Restaurante{
 
     @Override
     public double ajustarMedia(double media){
-        
+        media += estrelasMichelin * 0.5;
+        if(media > 5){
+            media = 5;
+        }
+        return media;
     }
 
 }
