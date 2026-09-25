@@ -4,6 +4,7 @@ public abstract class Produto {
     private String categoria;
     private double preco;
     private String codigo;
+    public static int totalProdutos;
 
     public Produto(String nome, String categoria, double preco, String codigo){
         this.nome = nome;

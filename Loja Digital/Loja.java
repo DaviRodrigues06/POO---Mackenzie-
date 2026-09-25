@@ -14,6 +14,7 @@ public class Loja {
 
     public void cadastrarProduto(Produto produto){
         produtos.put(produto.getCodigo(), produto);
+        
     }
 
     public void registrarVenda(String codigo){
